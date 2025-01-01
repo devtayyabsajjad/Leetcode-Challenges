@@ -1,10 +1,10 @@
 class Solution:
     def maxScore(self, s: str) -> int:
-        res = []
+        res = 0
         for i in range(1 , len(s)):
             
-            res.append(s[0:i].count("0") + s[i:].count("1"))
-        return max(res)
+            res = max(res,(s[0:i].count("0") + s[i:].count("1")))
+        return res
         
 
         
